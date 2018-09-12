@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <title>Citrus Park, Florida Weather</title>
+
+    <!-- Bootstrap -->
+   
+    <!-- CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <!-- JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <!-- Gauges -->
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load('current', {'packages':['gauge']});
+      google.charts.setOnLoadCallback(drawChart);
+
+      function drawChart() {
+
+        var data = google.visualization.arrayToDataTable([
+          ['Label', 'Value'],
+          ['Temperature', 80],
+          ['Humidity', 75],
+          ['Barometer', 30]
+        ]);
+
+        var options = {
+          width: 400, height: 120,
+          redFrom: 90, redTo: 100,
+          yellowFrom: 80, yellowTo: 90,
+          minorTicks: 5
+        };
+
+        var chart = new google.visualization.Gauge(document.getElementById('chart_div'));
+
+        chart.draw(data, options);
+
+        // Input from our readings
+        setInterval(function() {
+          data.setValue(0, 1, 78);
+          chart.draw(data, options);
+        }, 13000);
+        setInterval(function() {
+          data.setValue(1, 1, 84);
+          chart.draw(data, options);
+        }, 5000);
+        setInterval(function() {
+          data.setValue(2, 1, 30);
+          chart.draw(data, options);
+        }, 26000);
+      }
+    </script>
+
+    <!-- Site code -->
+	<title>Citrus Park, Florida Weather</title>
+	<link rel="shortcut icon" href="pictures/sun.jpg" type="image/jpg">
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<nav class="navbar navbar-inverse">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+			</div>
+			<div class="collapse navbar-collapse" id="myNavbar">
+				<ul class="nav navbar-nav navbar-right">
+					<li><a href="http://jschnebelen.myweb.usf.edu/weathermen/graphs.html">Graphs</a></li>
+					<li><a href="http://jschnebelen.myweb.usf.edu/weathermen/contact.html">Contact Us</a></li>
+					<li class="dropdown">
+						<a class="dropdown-toggle" data-toggle="dropdown" href="#">Links
+						<span class="caret"></span></a>
+						<ul class="dropdown-menu">
+							<li><a href="https://www.nhc.noaa.gov/">National Hurricane Center</a></li>
+							<li><a href="https://www.fema.gov/">FEMA</a></li>
+							<li><a href="https://www.visitflorida.com/en-us.html">Visit Florida</a></li>
+						</ul>
+					</li>
+				</ul>
+					<ul class="nav navbar-nav navbar-left">
+						<li class="active"><a href="http://jschnebelen.myweb.usf.edu/weathermen/home.html"><span class="glyphicon glyphicon-home"></span> Home</a></li>
+					</ul>
+			</div>
+		</div>
+	</nav>
+	<table>
+		<tr><td><div id="chart_div"></div></td>
+		<td><div style="width: 650px;"><iframe src="https://cdnres.willyweather.com/widget/loadView.html?id=94151" width="650" height="92" frameborder="0" scrolling="no"></iframe><a style="float: right;width: 20px;z-index: 1;margin: -92px 0 0 0;text-indent: -9999em;height: 92px;position: relative" href="https://www.willyweather.com/fl/hillsborough-county/tampa.html" rel="nofollow">tampa's weather</a></div></td></tr>
+	</table>
+</body>
+</html>

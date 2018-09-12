@@ -1,0 +1,59 @@
+.container-fluid{
+	background-color: black;
+}
+.navbar-inverse li{
+	 border-right: 1px solid #bbb;
+}
+.dropdown-menu > li > a{
+	background-color: #101010;
+	color: white;
+}
+body{
+	margin: 0;
+	padding: 0;
+	text-align: center;
+	background: linear-gradient(rgba(0, 0, 50, 0.5), rgba(0, 0, 50, 0.5)), url(pictures/contactbackground.jpg);
+	background-size: cover;
+	background-position: top;
+	font-weight:bold;
+	font-size:18px;
+}
+.contact-title{
+	color: white;
+	transition: all 4s ease-in-out;
+}
+.contact-title h1{
+	font-size: 32px;
+	line-height: 10px;
+}
+.contact-form{
+	margin-top: 80px;
+	transition: all 4s ease-in-out;
+}
+.form-control{
+	width: 600px;
+	background: transparent;
+	border: none;
+	outline: none;
+	border-bottom: 1px solid gray;
+	color: white;
+	font-size: 18px;
+	margin-bottom: 16px;
+}
+input{
+	height: 45px;
+}
+form .submit{
+	background: #229b28;
+	border-color: transparent;
+	color: white;
+	font-size: 20px;
+	font-weight: bold;
+	letter-spacing: 2px;
+	height: 50px;
+	margin-top: 18px;
+}
+form .submit:hover{
+	background-color: green;
+	cursor: pointer;
+}

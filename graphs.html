@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Citrus Park, Florida Weather</title>
+
+    <!-- Bootstrap -->
+   
+    <!-- CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <!-- JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <!-- Temperature Graph -->
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load('current', {'packages':['corechart']});
+      google.charts.setOnLoadCallback(drawChart);
+
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+          ['Day', 'Temperature (F)'],
+          ['Septemer',  86],
+          ['October',  78],
+          ['November',  74],
+          ['December',  72]
+        ]);
+
+        var options = {
+          title: 'Citrus Park Temperatures',
+          curveType: 'function',
+          legend: { position: 'bottom' }
+        };
+
+        var chart = new google.visualization.LineChart(document.getElementById('temperature_graph'));
+
+        chart.draw(data, options);
+      }
+
+    </script>
+
+	<!-- Humidity Graph -->
+    <script type="text/javascript">
+      google.charts.load('current', {'packages':['corechart']});
+      google.charts.setOnLoadCallback(drawChart);
+
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+          ['Day', 'Humidity'],
+          ['Septemer',  56],
+          ['October',  58],
+          ['November',  54],
+          ['December',  52]
+        ]);
+
+        var options = {
+          title: 'Citrus Park Humidity',
+          curveType: 'function',
+          legend: { position: 'bottom' }
+        };
+
+        var chart = new google.visualization.LineChart(document.getElementById('humidity_graph'));
+
+        chart.draw(data, options);
+      }
+  	</script>
+
+  	<!-- Barometric Graph -->
+    <script type="text/javascript">
+      google.charts.load('current', {'packages':['corechart']});
+      google.charts.setOnLoadCallback(drawChart);
+
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+          ['Day', 'Barometric Pressure'],
+          ['Septemer',  26],
+          ['October',  28],
+          ['November',  34],
+          ['December',  32]
+        ]);
+
+        var options = {
+          title: 'Citrus Park Barometric Pressure',
+          curveType: 'function',
+          legend: { position: 'bottom' }
+        };
+
+        var chart = new google.visualization.LineChart(document.getElementById('barometric_graph'));
+
+        chart.draw(data, options);
+      }
+  	</script>
+
+  	<!-- Wind Graph -->
+    <script type="text/javascript">
+      google.charts.load('current', {'packages':['corechart']});
+      google.charts.setOnLoadCallback(drawChart);
+
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+          ['Day', 'Wind Speed (mph)'],
+          ['Septemer',  6],
+          ['October',  8],
+          ['November',  4],
+          ['December',  2]
+        ]);
+
+        var options = {
+          title: 'Citrus Park Wind',
+          curveType: 'function',
+          legend: { position: 'bottom' }
+        };
+
+        var chart = new google.visualization.LineChart(document.getElementById('wind_graph'));
+
+        chart.draw(data, options);
+      }
+  	</script>
+
+    <!-- Site code -->
+	<title>Citrus Park, Florida Weather</title>
+	<link rel="shortcut icon" href="pictures/sun.jpg" type="image/jpg">
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<nav class="navbar navbar-inverse">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+			</div>
+			<div class="collapse navbar-collapse" id="myNavbar">
+				<ul class="nav navbar-nav navbar-right">
+					<li><a href="http://jschnebelen.myweb.usf.edu/weathermen/graphs.html">Graphs</a></li>
+					<li><a href="http://jschnebelen.myweb.usf.edu/weathermen/contact.html">Contact Us</a></li>
+					<li class="dropdown">
+						<a class="dropdown-toggle" data-toggle="dropdown" href="#">Links
+						<span class="caret"></span></a>
+						<ul class="dropdown-menu">
+							<li><a href="https://www.nhc.noaa.gov/">National Hurricane Center</a></li>
+							<li><a href="https://www.fema.gov/">FEMA</a></li>
+							<li><a href="https://www.visitflorida.com/en-us.html">Visit Florida</a></li>
+						</ul>
+					</li>
+				</ul>
+					<ul class="nav navbar-nav navbar-left">
+						<li class="active"><a href="http://jschnebelen.myweb.usf.edu/weathermen/home.html"><span class="glyphicon glyphicon-home"></span> Home</a></li>
+					</ul>
+			</div>
+		</div>
+	</nav>
+
+<body>
+	<br>
+    <div id="temperature_graph" class="temperature_graph"></div>
+    <div id="humidity_graph" class="humidity_graph"></div>
+    <div id="barometric_graph" class="barometric_graph"></div>
+    <div id="wind_graph" class="wind_graph"></div>
+</body>
+</html>

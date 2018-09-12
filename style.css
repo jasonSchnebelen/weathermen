@@ -1,0 +1,35 @@
+.container-fluid{
+	background-color: black;
+}
+.navbar-inverse li{
+	 border-right: 1px solid #bbb;
+}
+.dropdown-menu > li > a{
+	background-color: #101010;
+	color: white;
+}
+body{
+	color:black;
+	font-weight:bold;
+	font-size:18px;
+}
+.temperature_graph{
+	float: left;
+	width: 50%;
+	height: 300px;
+}
+.humidity_graph{
+	float: right;
+	width: 50%;
+	height: 300px;
+}
+.barometric_graph{
+	float: left;
+	width: 50%;
+	height: 300px;
+}
+.wind_graph{
+	float: right;
+	width: 50%;
+	height: 300px;
+}
