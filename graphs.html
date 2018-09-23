@@ -53,7 +53,7 @@
 
       function drawChart() {
         var data = google.visualization.arrayToDataTable([
-          ['Day', 'Humidity'],
+          ['Day', 'Humidity (%)'],
           ['Septemer',  56],
           ['October',  58],
           ['November',  54],
@@ -79,7 +79,7 @@
 
       function drawChart() {
         var data = google.visualization.arrayToDataTable([
-          ['Day', 'Barometric Pressure'],
+          ['Day', 'Barometric Pressure (Hg)'],
           ['Septemer',  26],
           ['October',  28],
           ['November',  34],
@@ -128,6 +128,9 @@
 	<title>Citrus Park, Florida Weather</title>
 	<link rel="shortcut icon" href="pictures/sun.jpg" type="image/jpg">
 	<link rel="stylesheet" href="style.css">
+  <video autoplay muted loop id="WaterVideo">
+  <source src="pictures/water.mp4" type="video/mp4">
+</video>
 </head>
 <body>
 	<nav class="navbar navbar-inverse">
@@ -162,9 +165,11 @@
 
 <body>
 	<br>
+  <div class="content" align="center">
     <div id="temperature_graph" class="temperature_graph"></div>
     <div id="humidity_graph" class="humidity_graph"></div>
     <div id="barometric_graph" class="barometric_graph"></div>
     <div id="wind_graph" class="wind_graph"></div>
+  </div>
 </body>
 </html>
